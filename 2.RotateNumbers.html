@@ -1,0 +1,46 @@
+<html>
+<head>
+<script type="text/javascript">
+var num=[1,2,3,4,5,6,7,8,9];
+function Rotate(){
+    // alert('Values Changed')
+    let old=num[3];
+    document.getElementById('4').innerHTML=num[6];
+    num[3]=num[6];
+    document.getElementById('7').innerHTML=num[7];
+    num[6]=num[7];
+    document.getElementById('8').innerHTML=num[8];
+    num[7]=num[8];
+    document.getElementById('9').innerHTML=num[5];
+    num[8]=num[5];
+    document.getElementById('6').innerHTML=num[2];
+    num[5]=num[2];
+    document.getElementById('3').innerHTML=num[1];
+    num[2]=num[1];
+    document.getElementById('2').innerHTML=num[0];
+    num[1]=num[0];
+    document.getElementById('1').innerHTML=old;
+    num[0]=old;
+    return false;
+}
+</script>
+</head>
+
+<body>
+<div>
+    <button><label id="1">1</label></button>
+    <button><label id="2">2</label></button>
+    <button><label id="3">3</label></button>
+</div>
+<div>
+    <button><label id="4">4</label></button>
+    <button onclick="Rotate()"><label id="5">5</label></button>
+    <button><label id="6">6</label></button>
+</div>
+<div>
+    <button><label id="7">7</label></button>
+    <button><label id="8">8</label></button>
+    <button><label id="9">9</label></button>
+</div>
+</body>
+</html>
